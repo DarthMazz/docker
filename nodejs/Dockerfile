@@ -15,5 +15,5 @@ RUN npm install
 # アプリケーションのソースをバンドルする
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 CMD [ "node", "server.js" ]

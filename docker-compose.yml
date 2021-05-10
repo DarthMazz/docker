@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./nginx          # Dockerfile保存場所
+      dockerfile: Dockerfile    # Dockerfileファイル名
+    image: nn-web               # docker image name
+    container_name: nn-web      # docker container name
+    ports:
+      - 80:80
+
+  app:
+    build:
+      context: ./nodejs         # Dockerfile保存場所
+      dockerfile: Dockerfile    # Dockerfileファイル名
+    image: nn-app               # イメージ名
+    container_name: nn-app      # コンテナ名
+    ports:                      # ポート接続
+      - 3000:3000

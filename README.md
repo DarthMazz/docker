@@ -41,3 +41,8 @@ docker detach
 ```
 exit
 ```
+
+## docker-compose
+```
+docker-compose up --build
+```
